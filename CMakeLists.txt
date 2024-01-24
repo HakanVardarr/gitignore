@@ -1,12 +1,14 @@
 cmake_minimum_required(VERSION 3.27)
 
+set(CMAKE_CXX_STANDARD 17)
+
+# Use your own cmake_toolchain (vcpkg) or else this will not work
+set(CMAKE_TOOLCHAIN_FILE "C:/Users/hakov/Documents/Programming/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
 project(gitignore)
+add_executable(${PROJECT_NAME} main.cpp)
 
-# Find libraries
 find_package(CURL REQUIRED)
-
-add_executable(gitignore main.cpp)
-target_link_libraries(gitignore PRIVATE ${CURL_LIBRARIES})
-target_include_directories(gitignore PRIVATE ${CURL_INCLUDE_DIRS})
-
+target_link_libraries(${PROJECT_NAME} PRIVATE ${CURL_LIBRARIES})
+target_include_directories(${PROJECT_NAME} PRIVATE ${CURL_INCLUDE_DIRS})
 

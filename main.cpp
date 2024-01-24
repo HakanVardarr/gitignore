@@ -1,4 +1,5 @@
 #include <iostream>
+#include <filesystem>
 #include <curl/curl.h>
 
 class GitignoreClient
