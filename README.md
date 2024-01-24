@@ -23,7 +23,8 @@ If you want to contribute or suggest improvements, feel free to open an issue or
 
 ## Roadmap
 
-### Caching Improvements
+### [Cache](https://github.com/HakanVardarr/gitignore/issues/1)
+
 
 - [ ] **Explore Caching Options**: Investigate different caching mechanisms to improve the efficiency of template generation.
   
