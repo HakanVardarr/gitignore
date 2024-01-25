@@ -1,4 +1,5 @@
 #include <iostream>
+#include <filesystem>
 #include <curl/curl.h>
 
 class GitignoreClient
@@ -63,6 +64,10 @@ public:
         curl_easy_cleanup(curl);
         return 0;
     }
+};
+
+class LocalCache
+{
 };
 
 int main(int argc, char *argv[])
