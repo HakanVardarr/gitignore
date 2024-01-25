@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.22)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 project(gitignore)
 
-include_directories(include) 
+include_directories(src) 
 aux_source_directory(src SOURCES)
 
 add_executable(${PROJECT_NAME} main.cpp ${SOURCES})

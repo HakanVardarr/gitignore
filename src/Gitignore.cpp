@@ -2,6 +2,7 @@
 
 #include <curl/curl.h>
 #include <iostream>
+#include <cstring>
 
 namespace Gitignore
 {
