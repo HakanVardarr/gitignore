@@ -15,10 +15,10 @@ class GitignoreClient
     }
 
 public:
-    GitignoreClient(std::string l)
+    GitignoreClient(std::string language)
     {
-        url = "https://www.toptal.com/developers/gitignore/api/" + l;
-        language = l;
+        url = "https://www.toptal.com/developers/gitignore/api/" + language;
+        this->language = language;
     }
     int get(std::string *response_body)
     {

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.cot": "python",
+        "xstring": "cpp"
+    }
+}
