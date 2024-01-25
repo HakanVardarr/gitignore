@@ -2,8 +2,6 @@
 #define GITIGNORE_CLIENT_H
 
 #include <string>
-#include <curl/curl.h>
-#include <iostream>
 
 namespace Gitignore
 {
