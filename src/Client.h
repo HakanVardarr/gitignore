@@ -3,27 +3,23 @@
 
 #include <string>
 
-namespace Client
-{
-
 #define STRING std::string
 
-    class Client
+class Client
+{
+    STRING url;
+    STRING language;
+
+    static size_t write_callback(void *contents, size_t size, size_t nmemb, std::string *response)
     {
-        STRING url;
-        STRING language;
+        size_t totalSize = size * nmemb;
+        response->append(static_cast<char *>(contents), totalSize);
+        return totalSize;
+    }
 
-        static size_t write_callback(void *contents, size_t size, size_t nmemb, std::string *response)
-        {
-            size_t totalSize = size * nmemb;
-            response->append(static_cast<char *>(contents), totalSize);
-            return totalSize;
-        }
-
-    public:
-        Client(STRING language);
-        int get(STRING *response_body);
-    };
-}
+public:
+    Client(STRING language);
+    int get(STRING *response_body);
+};
 
 #endif

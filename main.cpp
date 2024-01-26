@@ -1,4 +1,4 @@
-#include "Gitignore.h"
+#include "Client.h"
 #include "Temp.h"
 #include <iostream>
 
@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     //     return 1;
     // }
 
-    // Gitignore::Client client(argv[1]);
+    // Client client(argv[1]);
 
     // std::string response_body;
     // int res = client.get(&response_body);
@@ -21,8 +21,7 @@ int main(int argc, char *argv[])
     // }
 
     Temp::init("gitignore");
+    Temp::current();
 
-    // std::cout
-    //     << response_body << std::endl;
     return 0;
 }
