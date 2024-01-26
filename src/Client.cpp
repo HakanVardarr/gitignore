@@ -1,10 +1,10 @@
-#include "Gitignore.h"
+#include "Client.h"
 
 #include <curl/curl.h>
 #include <iostream>
 #include <cstring>
 
-namespace Gitignore
+namespace Client
 {
     Client::Client(STRING language) : language(language)
     {

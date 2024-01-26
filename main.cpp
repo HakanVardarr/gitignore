@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
     // }
 
     Temp::init("gitignore");
-    Temp::current();
 
     // std::cout
     //     << response_body << std::endl;

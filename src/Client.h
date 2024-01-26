@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace Gitignore
+namespace Client
 {
 
 #define STRING std::string
