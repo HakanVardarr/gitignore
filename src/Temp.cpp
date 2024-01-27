@@ -12,7 +12,6 @@ namespace Temp
     void init()
     {
         fs::path dir_path = fs::path("gitignore");
-
         fs::current_path(fs::temp_directory_path());
         if (!fs::exists(dir_path))
         {

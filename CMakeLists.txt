@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # For Windows (TODO: Just use the exteral_include in future)
 # Use your own cmake_toolchain (vcpkg) or else this will not work
-set(CMAKE_TOOLCHAIN_FILE "C:/Users/hakov/Documents/Programming/vcpkg/scripts/buildsystems/vcpkg.cmake")
+# set(CMAKE_TOOLCHAIN_FILE "C:/Users/hakov/Documents/Programming/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 project(gitignore)
 

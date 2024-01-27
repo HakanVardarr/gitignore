@@ -10,7 +10,7 @@ class Client
     STRING url;
     STRING language;
 
-    static size_t write_callback(void *contents, size_t size, size_t nmemb, std::string *response)
+    static size_t write_callback(void *contents, size_t size, size_t nmemb, STRING *response)
     {
         size_t totalSize = size * nmemb;
         response->append(static_cast<char *>(contents), totalSize);
