@@ -40,19 +40,43 @@ namespace Temp
         return false;
     }
 
-    bool read_file(std::string file_content, std::string language)
+    bool read_file(std::string &file_content, std::string language)
     {
         fs::path file_path = fs::path(fs::current_path() / language);
         std::ifstream temp_file(file_path);
 
         if (temp_file.is_open())
         {
-            std::cout << "READ FILE" << std::endl;
+            temp_file.seekg(0, std::ios::end);
+            std::streamsize file_size = temp_file.tellg();
+            temp_file.seekg(0, std::ios::beg);
+            file_content.resize(static_cast<std::size_t>(file_size));
+
+            temp_file.read(&file_content[0], file_size);
+
             temp_file.close();
         }
         else
         {
             std::cout << "[ERROR]: Error happened when opening file" << std::endl;
+            return false;
+        }
+
+        return true;
+    }
+    bool write_file(std::string &file_content, std::string language)
+    {
+        fs::path file_path = fs::path(fs::current_path() / language);
+        std::ofstream temp_file(file_path);
+
+        if (temp_file.is_open())
+        {
+            temp_file << file_content;
+            temp_file.close();
+        }
+        else
+        {
+            std::cout << "[ERROR]: Error happened when opening file for writing" << std::endl;
             return false;
         }
 
