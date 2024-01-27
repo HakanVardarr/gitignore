@@ -20,14 +20,14 @@ int main(int argc, char *argv[])
     {
         Temp::read_file(gitignore_content, argv[1]);
     }
-
-    // std::string response_body;
-    // int res = client.get(&response_body);
-
-    // if (res == -1)
-    // {
-    //     return 1;
-    // }
+    else
+    {
+        int res = client.get(&gitignore_content);
+        if (res == -1)
+        {
+            return 1;
+        }
+    }
 
     return 0;
 }

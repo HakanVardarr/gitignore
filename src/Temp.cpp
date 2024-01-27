@@ -22,11 +22,6 @@ namespace Temp
         fs::current_path(dir_path);
     }
 
-    void current()
-    {
-        std::cout << "Current directory: " << fs::current_path() << std::endl;
-    }
-
     bool check_file(std::string language)
     {
 
