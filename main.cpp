@@ -27,7 +27,10 @@ int main(int argc, char *argv[])
         {
             return 1;
         }
+        Temp::write_file(gitignore_content, argv[1]);
     }
+
+    std::cout << gitignore_content << std::endl;
 
     return 0;
 }
